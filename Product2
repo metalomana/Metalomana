@@ -1,0 +1,90 @@
+import java.time.LocalDate;
+public class Product2 {
+        private String name;
+        private LocalDate productionDate;
+        private String manufacturer;
+        private String originCountry;
+        private double price;
+        private boolean isReserved;
+
+        public Product2(String name,
+                       LocalDate productionDate,
+                       String manufacturer,
+                       String originCountry,
+                       double price,
+                       boolean isReserved) {
+
+            this.name = name;
+            this.productionDate = productionDate;
+            this.manufacturer = manufacturer;
+            this.originCountry = originCountry;
+            this.price = price;
+            this.isReserved = isReserved;
+        }
+
+        public void printInfo() {
+            System.out.println("Название: " + name);
+            System.out.println("Дата производства: " + productionDate);
+            System.out.println("Производитель: " + manufacturer);
+            System.out.println("Страна происхождения: " + originCountry);
+            System.out.println("Цена: " + price);
+            System.out.println("Забронирован: " + (isReserved ? "Да" : "Нет"));
+            System.out.println("-----------------------------------");
+        }
+
+        public static void main(String[] args) {
+
+            Product[] productsArray = new Product[5];
+
+
+            productsArray[0] = new Product(
+                    "Samsung S25 Ultra",
+                    LocalDate.of(2025, 2, 1),
+                    "Samsung Corp.",
+                    "Korea",
+                    5599,
+                    true
+            );
+
+            productsArray[1] = new Product(
+                    "iPhone 16 Pro",
+                    LocalDate.of(2025, 3, 15),
+                    "Apple Inc.",
+                    "USA",
+                    6299,
+                    false
+            );
+
+            productsArray[2] = new Product(
+                    "Xiaomi Redmi A5",
+                    LocalDate.of(2025, 1, 20),
+                    "Xiaomi",
+                    "China",
+                    3999,
+                    false
+            );
+
+            productsArray[3] = new Product(
+                    "Tecno Spark 40",
+                    LocalDate.of(2025, 4, 5),
+                    "Tecno",
+                    "China",
+                    4799,
+                    true
+            );
+
+            productsArray[4] = new Product(
+                    "Google Pixel 10",
+                    LocalDate.of(2025, 5, 10),
+                    "Google",
+                    "USA",
+                    5499,
+                    false
+            );
+
+            
+            for (Product product : productsArray) {
+                product.printInfo();
+            }
+        }
+    }
