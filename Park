@@ -8,7 +8,6 @@ public class Park {
             this.parkName = parkName;
         }
 
-        // Внутренний класс
         public class Attraction {
 
             private String attractionName;
@@ -35,7 +34,6 @@ public class Park {
             }
         }
 
-        // Пример использования
         public static void main(String[] args) {
 
             Park park = new Park("DreamLand");
